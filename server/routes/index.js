@@ -11,4 +11,5 @@ module.exports = (app) => {
   app.get('/api/todos', todosController.list);//list todos
   app.get('/api/todos/:todoId', todosController.retrieve);//geta single todo
   app.post('/api/todos/:todoId/items', todoItemsController.create);//create todo item
+  app.put('/api/todos/:todoId', todosController.update);//update todo
 };
