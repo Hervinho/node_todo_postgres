@@ -8,6 +8,7 @@ module.exports = (app) => {
   }));
 
   app.post('/api/todos', todosController.create);//create todo
-  app.get('/api/todos', todosController.list);//list todo
+  app.get('/api/todos', todosController.list);//list todos
+  app.get('/api/todos/:todoId', todosController.retrieve);//geta single todo
   app.post('/api/todos/:todoId/items', todoItemsController.create);//create todo item
 };
